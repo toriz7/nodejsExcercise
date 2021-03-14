@@ -1,0 +1,22 @@
+{
+  "name": "exercise",
+  "version": "1.0.0",
+  "description": "nodejs study",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/toriz7/nodejsExercise.git"
+  },
+  "keywords": [
+    "nodejs"
+  ],
+  "author": "DanielKim",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/toriz7/nodejsExercise/issues"
+  },
+  "homepage": "https://github.com/toriz7/nodejsExercise#readme"
+}
