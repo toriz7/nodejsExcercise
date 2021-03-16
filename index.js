@@ -1,12 +1,11 @@
-function Person(name){
-    this.name = name || "Kyungho";
-}
-Person.prototype.getName=function(){
-    return this.name;
-}
+const express=require('express');
+const app=express();
+const port=3000;
+app.get('/',(req,res)=>{
+    res.send("hello world! Express");
+});
+app.listen(port, () =>{
+    console.log("Express Listening on port",port);
+})
 
-function Korean (name){
-    Person.apply(this,arguments);
-}
-var kor1=new Korean('지민');
-console.log(kor1.name);
+///what the?

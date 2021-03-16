@@ -1,0 +1,31 @@
+package.json, pacakge-lock.json 차이
+패키지가 잠고하는 라이브러리, 프레임워크 정보 : package.json
+각 패키지가 참고하는 라이브러리, 프레임워크 정보 : package-lock.json
+ex> express 가 사용하는 A의 버전은 3. uuid4 는 4라고 가정할 때,
+전체 사용 A 를 4버전으로 하면 문제가 생기므로, 각 프레임워크의 참고 라이브러리를 분리한 것.
+
+
+<express>
+1. express 시작
+2. Routing
+3. View Engine-Nunjucks
+4. 템플릿 상속
+5. 미들웨어
+6. from(body-parser)
+7. 정적파일
+8. Global View Variable
+9.404, 500 error handling
+10. nunjucks macro
+11. Express 권장 구조
+
+
+
+express 를 왜 사용하는가?
+1. 웹서비스 관점
+-> express 사용하지 않고 웹서버 띄우면. 세션처리가 어렵다
+-> 제공되는 미들웨어가 편하당
+2. 프레임워크 선정시 고려할 점
+->copy, sales.js 아닌 express 인 이유는...이미 많이 사용되고 있기 때문.
+
+
+nodeon 명령어는 node 와는 다르게 코드 자동반영된다.
