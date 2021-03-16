@@ -29,3 +29,5 @@ express 를 왜 사용하는가?
 
 
 nodeon 명령어는 node 와는 다르게 코드 자동반영된다.
+
+npx 명령어
