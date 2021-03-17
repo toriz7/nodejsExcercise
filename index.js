@@ -1,5 +1,5 @@
 const express=require('express');
-const admin=require('./routes/admin')
+const admin=require('./routes/admin') // admin 아래의 url 을 접속하기 위한 변수
 const app=express();
 const port=3000;
 app.get('/',(req,res)=>{
