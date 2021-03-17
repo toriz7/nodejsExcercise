@@ -30,4 +30,8 @@ express 를 왜 사용하는가?
 
 nodeon 명령어는 node 와는 다르게 코드 자동반영된다.
 
-npx 명령어
+npx 명령어 : 설치 안 되어 있는 모듈 설치
+
+"script"  내 -e js,html  : 템플릿 변경을 바로 적용
+
+
