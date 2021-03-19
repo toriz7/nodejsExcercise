@@ -1,25 +1,24 @@
-{% set title = "관리자 리스트" %} <!-- 상단에 제목 타이틀을 넘겨야 한다-->
+{% set title = "제품 등록" %}
 {% extends "layout/base.html" %}
  
 {% block content -%}
-    <table class="table table-bordered table-hover">
-        <tr>
-            <th>제목</th>
-            <th>작성일</th>
-            <th>삭제</th>
-        </tr>
-        <tr>
-            <td>제품 이름</td>
-            <td>
-                2020-03-07
-            </td>
-            <td>
-                <a href="#" class="btn btn-danger">삭제</a>
-            </td>
-        </tr>
-    </table>
-
-    <a href="/admin/products/write" class="btn btn-default">작성하기</a>
+    <form action="" method="post">
+        <table class="table table-bordered">
+            <tr>
+                <th>제품명</th>
+                <td><input type="text" name="name" class="form-control"/></td>
+            </tr>
+            <tr>
+                <th>가격</th>
+                <td><input type="text" name="price" class="form-control"/></td>
+            </tr>
+            <tr>
+                <th>설명</th>
+                <td><input type="text" name="description" class="form-control"/></td>
+            </tr>
+        </table>
+        <button class="btn btn-primary">작성하기</button>
+    </form>
 
 {% endblock %}
 <!-- {{online | safe}}

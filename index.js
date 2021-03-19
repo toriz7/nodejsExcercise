@@ -2,14 +2,16 @@ const express=require('express');
 const admin=require('./routes/admin') // admin 아래의 url 을 접속하기 위한 변수
 const nunjucks=require('nunjucks');
 const logger = require('morgan');
-
+const bodyParser=require('body-parser'); //express 의 내장 모듈이에 따로 설치가 필요 없다
 const app=express();
 const port=3000;
 
 
 app.use('/admin',vipMiddleware,admin); //요건 미들웨어. 
-//middleware setting
+/* middleware setting */
 app.use(logger('dev'));
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({extended:false}));
 
 
 nunjucks.configure('template',{
@@ -30,4 +32,4 @@ app.listen(port, () =>{
     console.log("Express Listening on port",port);
 })
 
-///what the?
+///what the? ff
