@@ -36,3 +36,10 @@ npx 명령어 : 설치 안 되어 있는 모듈 설치
 
 
 템플렛 상속 : 공통된 html 부분을 상속해서 재사용
+
+
+
+
+controllers/index 대분류 url + 폴더위치
+controllers/admin/index (admin url+미들웨어)
+controllers/admin/admin.ctrl(admin url + 미들웨어)

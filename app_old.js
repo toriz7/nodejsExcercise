@@ -23,19 +23,16 @@ app.use((req,res,next)=>{
 
 app.use('/admin',admin); //요건 미들웨어.  admin 이하 url 사용되는  세팅이므로 위치가 미들웨어 전체 세팅보다 아래에 있어야 한다.
 
-app.use((req,res, _ )=>{
-    res.status(400).render('common/404.html');
-});
-app.use((req,res, _ )=>{
-    res.status(500).render('common/500.html');
-});
 
+
+
+/*nunjucks 설정 */
 nunjucks.configure('template',{
     autoescape: true, //html, javascript 오류 공격시 태그. 크로스사이트 공격 방어.
     express:app //express 변수인 app 선언
 });
 
-function vipMiddleware(req,res,next){
+function vipMiddleware(req,res,next){ // 테스트용 미들웨어
     console.log('vip middle ware');
     next();
 }
@@ -44,7 +41,13 @@ app.get('/',(req,res)=>{
     res.send("hello world! Express");
 });
 
-
+/*404, 500 오류 시 대처 페이지  위에 있으면 안됨?*/
+app.use((req,res, _ )=>{
+    res.status(400).render('common/404.html');
+});
+app.use((req,res, _ )=>{
+    res.status(500).render('common/500.html');
+});
 
 app.listen(port, () =>{
     console.log("Express Listening on port",port);
